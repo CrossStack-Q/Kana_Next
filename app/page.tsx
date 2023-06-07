@@ -5,21 +5,32 @@ import { ThemeProvider } from "next-themes"
 
 
 
+import { AppWrapper } from "@/store/state"
+
 
 
 import Navbar from '@/components/Navbar'
 import Image from 'next/image'
 import HomePage from '@/components/HomePage'
+import DatePage from '@/components/DatePage'
 
 export default function Home() {
   return (
-    <ThemeProvider attribute="class">
-    <main className="max-w-7xl mx-auto">
+    <AppWrapper>
+      <ThemeProvider attribute="class">
+        <main className="max-w-7xl mx-auto">
 
-      <Navbar/>
-      <HomePage/>
-      
-    </main>
-    </ThemeProvider>
+          <Navbar />
+          {/* <HomePage/> */}
+          <DatePage />
+
+        </main>
+      </ThemeProvider>
+
+    </AppWrapper>
   )
 }
+
+
+
+
