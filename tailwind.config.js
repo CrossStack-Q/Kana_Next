@@ -19,8 +19,13 @@ module.exports = {
           text: '#ffffff',
         },
         light: {
-          background: '#ffffff',
-          text: '#000000',
+          Lgrey: '#E3EBF3',
+          grey: "#BFCCD9",
+          caption:"#698096",
+          text:"#00264D",
+          primary:"#0080FF",
+          background:"#F1F5F9",
+          white:"#ffffff",
         },
       }
     },
