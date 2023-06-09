@@ -23,8 +23,8 @@ export default function Home() {
 
           <Navbar />
           <HomePage/>
-          <DatePage />
-          <GuestPage/>
+          {/* <DatePage /> */}
+          {/* <GuestPage/> */}
 
         </main>
       </ThemeProvider>
