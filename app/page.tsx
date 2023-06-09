@@ -22,9 +22,9 @@ export default function Home() {
         <main className="max-w-7xl mx-auto">
 
           <Navbar />
-          <HomePage/>
+          {/* <HomePage/> */}
           {/* <DatePage /> */}
-          {/* <GuestPage/> */}
+          <GuestPage/>
 
         </main>
       </ThemeProvider>
