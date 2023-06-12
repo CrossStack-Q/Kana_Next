@@ -11,8 +11,8 @@ type Props = {
 
 function DestinationCard({ imageSrc, title, hotelcount, price }: Props) {
     return (
-        <div className='m-2 h-64 relative'>
-            <div className='h-52 relative'>
+        <div className='m-2 md:h-64 h-96 relative'>
+            <div className='md:h-52 h-72 md:w-auto w-52 relative'>
                 <Image alt="image" src={`${imageSrc}`} fill={true} className='relative rounded-xl' />
             </div>
             <p>{title}</p>

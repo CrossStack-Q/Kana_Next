@@ -10,9 +10,11 @@ export function AppWrapper({ children }) {
     
 
     const [region, setRegion] = useState("Delhi");
-  
+    const [alone, setAlone] = useState(false);
+    const [calender, setCalender] = useState(false);
+    const [currentPage, setCurrentPage] = useState(4);
 
-  const value = { region , setRegion };
+  const value = { region , setRegion , alone, setAlone , calender, setCalender ,currentPage, setCurrentPage  };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }

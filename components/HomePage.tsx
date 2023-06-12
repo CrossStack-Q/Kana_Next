@@ -1,29 +1,31 @@
 import React from 'react'
 import DestinationCard from './DestinationCard'
 import India from './Map/India'
+import { useAppContext } from "@/store/state";
 
 type Props = {}
 
 function HomePage({ }: Props) {
+  const { currentPage, setCurrentPage } = useAppContext();
   return (
     <div className='flex h-[94vh] items-center '>
-      <div className='h-[94vh] flex-[0.6] flex flex-col justify-between pt-12'>
+      <div className='h-[94vh] md:flex-[0.6] flex-1 flex flex-col justify-between pt-12'>
         <p className='text-xl'>
           <span className='text-light-text font-semibold'>Hey `{`User`}`</span>
           <br />
           Good morning
         </p>
-        <div className='text-6xl font-semibold text-light-text'>
+        <div className='md:text-5xl md:text-left text-center lg:text-6xl text-4xl font-semibold text-light-text'>
           <span className='text-light-primary leading-tight' >Where{" "}</span>
           <span className='leading-tight'>are you</span>
-          <br />
+          <br className='hidden md:block' />
           <span className='leading-tight'>
             {" "}going to go?
           </span>
         </div>
 
-        <div>
-          <div className='w-fit rounded-full bg-white py-4 px-1 text-2xl'>
+        <div className='flex flex-col md:items-start items-center'>
+          <div className='md:w-full md:max-w-fit max-w-xl rounded-full bg-white md:py-4 py-1 px-1 text-2xl'>
             <div className='flex items-center space-x-2'>
               <p className='ml-6 mr-2'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-light-grey">
@@ -31,8 +33,8 @@ function HomePage({ }: Props) {
                 </svg>
 
               </p>
-              <input placeholder='Destination or a hotel name' type="text" className='placeholder:text-light-grey focus:outline-none' />
-              <button className='bg-light-primary p-3 rounded-full -my-3 text-xl text-white font-semibold'>
+              <input placeholder='Destination or a hotel name' type="text" className='placeholder:text-light-grey w-full focus:outline-none' />
+              <button onClick={()=>{setCurrentPage(2);}} className='bg-light-primary md:p-3 rounded-full md:-my-3  md:text-xl text-lg p-1 whitespace-nowrap text-white font-semibold'>
                 Let's Go --{`>`}
               </button>
             </div>
@@ -43,8 +45,8 @@ function HomePage({ }: Props) {
           </p>
         </div>
 
-        <div>
-          <div className='flex justify-between'>
+        <div className='md:flex-none overflow-x-hidden flex-[0.8] '>
+          <div className='flex justify-between px-4 pt-2'>
             <p>
               Top Destinations
             </p>
@@ -55,7 +57,7 @@ function HomePage({ }: Props) {
               {`-->`}
             </p>
           </div>
-          <div className='flex'>
+          <div className='flex max-w-[100vw] overflow-x-hidden'>
             <DestinationCard imageSrc='https://raw.githubusercontent.com/sairol/kana/main/dest/a.jpg' title="Mandir 1" hotelcount='1232' price="7800" />
             <DestinationCard imageSrc='https://raw.githubusercontent.com/sairol/kana/main/dest/b.jpg' title="Mandir 1" hotelcount='1232' price="7800" />
             <DestinationCard imageSrc='https://raw.githubusercontent.com/sairol/kana/main/dest/c.jpg' title="Mandir 1" hotelcount='1232' price="7800" />
@@ -65,7 +67,7 @@ function HomePage({ }: Props) {
         </div>
 
       </div>
-      <div className="flex-[0.4] relative w-full flex bg-blue-500/50 rounded-3xl ml-4 mt-6">
+      <div className="flex-[0.4] hidden justify-center relative w-full h-[90%] -mb-12 md:flex rounded-3xl ml-4 mt-6 bg-blue-500/50 ">
         <div className="absolute text-light-white font-semibold text-lg w-full flex-1 pt-8 flex-grow items-center flex flex-col">
           <p className=''>
             Your next vacation Destination

@@ -26,6 +26,7 @@ module.exports = {
           primary:"#0080FF",
           background:"#F1F5F9",
           white:"#ffffff",
+          black:"#000000"
         },
       }
     },

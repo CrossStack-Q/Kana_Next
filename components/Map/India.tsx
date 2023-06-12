@@ -984,10 +984,8 @@ function India({ }: Props) {
                         opacity="1" vectorEffect="none" strokeDashoffset="0" stopColor="#000" stopOpacity="1"
                         data-originalstrokewidth="0.265"></path><text id="Lakshadweep_label" x="27.111" y="251.574"
                             className='text-[9.11761px] stroke-0 hidden'
-
                         >
                         <tspan
-
                             className="text-[3.799px] font-normal  text-center text-middle text-red-600 stroke-[0.759801px]"
 
                             dy="0" id="Lakshadweep_tspan" x="27.111" y="251.574" fill="#6a0707">Lakshadweep</tspan>

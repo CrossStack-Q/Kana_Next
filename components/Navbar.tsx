@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import React, { useEffect } from 'react'
 import { useTheme } from "next-themes";
+import { useAppContext } from "@/store/state";
 
 
 type Props = {}
@@ -10,13 +11,13 @@ type Props = {}
 function Navbar({ }: Props) {
     const { systemTheme, theme, setTheme } = useTheme();
     const currentTheme = theme === 'system' ? systemTheme : theme;
-
+    const { currentPage, setCurrentPage } = useAppContext();
     useEffect(() => {
       theme
     }, [theme]);
     
     return (
-        <div className='flex p-2 items-center justify-between max-w-7xl'>
+        <div className={`flex p-2 h-[8vh] ${currentPage=='4'?'bg-light-white':'bg-light-background'} items-center justify-between max-w-7xl`}>
             <div className=''>Kanao</div>
             <div className='flex space-x-3'>
                 <div className='flex items-center'>
