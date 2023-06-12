@@ -11,7 +11,7 @@ function Hotels() {
         <div className='flex-[0.5] bg-green-600'>
           okay
         </div>
-        <div className='flex-[0.5] bg-amber-400'>
+        <div className='flex-[0.5] bg-amber-500'>
           else
         </div>
       </div>
